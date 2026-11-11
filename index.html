@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Necromancer: Gravebreaker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="hud">
+      <div class="titlebar">
+        <div>
+          <div class="label">Classe</div>
+          <div class="value">Necromante</div>
+        </div>
+        <div>
+          <div class="label">Zona</div>
+          <div class="value" id="zoneName">Cemitério de Lich</div>
+        </div>
+      </div>
+
+      <div class="bars">
+        <div class="stat-row">
+          <span>Vida</span>
+          <div class="bar hp"><div id="hpFill"></div></div>
+          <strong id="hpText">0 / 0</strong>
+        </div>
+        <div class="stat-row">
+          <span>Mana</span>
+          <div class="bar mana"><div id="manaFill"></div></div>
+          <strong id="manaText">0 / 0</strong>
+        </div>
+        <div class="stat-row">
+          <span>Experiência</span>
+          <div class="bar xp"><div id="xpFill"></div></div>
+          <strong id="xpText">0 / 0</strong>
+        </div>
+      </div>
+
+      <div class="detail-grid">
+        <div class="chip"><span>Nível</span><strong id="levelValue">1</strong></div>
+        <div class="chip"><span>Onda</span><strong id="waveValue">1</strong></div>
+        <div class="chip"><span>Esqueletos</span><strong id="minionValue">0</strong></div>
+        <div class="chip"><span>ouro</span><strong id="goldValue">0</strong></div>
+      </div>
+
+      <div class="skills">
+        <button data-skill="boneSpear">Q · Lança Óssea</button>
+        <button data-skill="skeletons">E · Esqueletos</button>
+        <button data-skill="corpseExplosion">R · Explosão de Cadáver</button>
+        <button data-skill="boneArmor">F · Armadura Óssea</button>
+      </div>
+
+      <div class="message" id="messageBox">Enter the graveyard and survive the night.</div>
+    </div>
+
+    <canvas id="gameCanvas" width="960" height="540"></canvas>
+
+    <script src="game.js"></script>
+  </body>
+</html>
